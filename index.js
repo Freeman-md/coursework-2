@@ -35,6 +35,15 @@ db.initialize('lessons', function(dbCollection) { // successCallback
         });
     });
 
+    // app.post("/lessons", (req, res) => {
+    //     const lessons = req.body;
+    //     dbCollection.insertMany(lessons, (error, result) => { // callback of insertOne
+    //         if (error) throw error;
+    //         // return created order
+    //         res.json(result);
+    //     });
+    // });
+
     // update lesson
     app.put("/lessons/:id", (req, res) => {
         // get the lesson id from the request parameters
@@ -85,6 +94,15 @@ db.initialize('users', function(dbCollection) { // successCallback
             res.json(result);
         });
     });
+
+    // app.post("/users", (req, res) => {
+    //     const users = req.body;
+    //     dbCollection.insertMany(users, (error, result) => { // callback of insertOne
+    //         if (error) throw error;
+    //         // return created order
+    //         res.json(result);
+    //     });
+    // });
 
     // get one user - authenticated user
     app.get("/user", (req, res) => {
